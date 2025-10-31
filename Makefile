@@ -3,14 +3,16 @@ XVLOG := xvlog.bat
 XELAB := xelab.bat
 XSIM := xsim.bat
 
-MODULE := tb_rca
+MODULE := tb_pa
 
 # Sources Configuration
 SOURCES := \
 	src/rca.sv \
 	test/rca_tb.sv \
 	src/cla.sv \
-	test/cla_tb.sv
+	test/cla_tb.sv \
+	src/pa.sv \
+	test/pa_tb.sv
 
 # Root Task
 all: simulate
