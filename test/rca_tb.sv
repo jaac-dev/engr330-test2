@@ -33,9 +33,12 @@ module rca_tb #(parameter int N = 8) (rca_bus.test bus);
   endtask
 
   initial begin
+    // Overflow cases.
     run('1, '1, '1);
     run('1, '0, '1);
     run('0, '1, '1);
+
+    
   end
 endmodule
 
