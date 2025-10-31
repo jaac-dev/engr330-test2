@@ -1,11 +1,11 @@
 Copyright 1986-2022 Xilinx, Inc. All Rights Reserved. Copyright 2022-2024 Advanced Micro Devices, Inc. All Rights Reserved.
 ---------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2024.2 (win64) Build 5239630 Fri Nov 08 22:35:27 MST 2024
-| Date         : Thu Oct 30 23:09:36 2025
+| Date         : Thu Oct 30 23:01:21 2025
 | Host         : XPS15 running 64-bit major release  (build 9200)
-| Command      : report_utilization -file cla_timing_utilization_synth.rpt -pb cla_timing_utilization_synth.pb
-| Design       : cla_timing
-| Device       : xc7a100tcsg324-1
+| Command      : report_utilization -file ./reports/cla32/cla32_util.txt
+| Design       : cla
+| Device       : xc7a35tcsg324-1
 | Speed File   : -1
 | Design State : Synthesized
 ---------------------------------------------------------------------------------------------------------------------------------------------
@@ -31,14 +31,14 @@ Table of Contents
 +-------------------------+------+-------+------------+-----------+-------+
 |        Site Type        | Used | Fixed | Prohibited | Available | Util% |
 +-------------------------+------+-------+------------+-----------+-------+
-| Slice LUTs*             |    1 |     0 |          0 |     63400 | <0.01 |
-|   LUT as Logic          |    1 |     0 |          0 |     63400 | <0.01 |
-|   LUT as Memory         |    0 |     0 |          0 |     19000 |  0.00 |
-| Slice Registers         |    0 |     0 |          0 |    126800 |  0.00 |
-|   Register as Flip Flop |    0 |     0 |          0 |    126800 |  0.00 |
-|   Register as Latch     |    0 |     0 |          0 |    126800 |  0.00 |
-| F7 Muxes                |    0 |     0 |          0 |     31700 |  0.00 |
-| F8 Muxes                |    0 |     0 |          0 |     15850 |  0.00 |
+| Slice LUTs*             |   67 |     0 |          0 |     20800 |  0.32 |
+|   LUT as Logic          |   67 |     0 |          0 |     20800 |  0.32 |
+|   LUT as Memory         |    0 |     0 |          0 |      9600 |  0.00 |
+| Slice Registers         |    0 |     0 |          0 |     41600 |  0.00 |
+|   Register as Flip Flop |    0 |     0 |          0 |     41600 |  0.00 |
+|   Register as Latch     |    0 |     0 |          0 |     41600 |  0.00 |
+| F7 Muxes                |    0 |     0 |          0 |     16300 |  0.00 |
+| F8 Muxes                |    0 |     0 |          0 |      8150 |  0.00 |
 +-------------------------+------+-------+------------+-----------+-------+
 * Warning! The Final LUT count, after physical optimizations and full implementation, is typically lower. Run opt_design after synthesis, if not already completed, for a more realistic count.
 Warning! LUT value is adjusted to account for LUT combining.
@@ -70,9 +70,9 @@ Warning! For any ECO changes, please run place_design if there are unplaced inst
 +----------------+------+-------+------------+-----------+-------+
 |    Site Type   | Used | Fixed | Prohibited | Available | Util% |
 +----------------+------+-------+------------+-----------+-------+
-| Block RAM Tile |    0 |     0 |          0 |       135 |  0.00 |
-|   RAMB36/FIFO* |    0 |     0 |          0 |       135 |  0.00 |
-|   RAMB18       |    0 |     0 |          0 |       270 |  0.00 |
+| Block RAM Tile |    0 |     0 |          0 |        50 |  0.00 |
+|   RAMB36/FIFO* |    0 |     0 |          0 |        50 |  0.00 |
+|   RAMB18       |    0 |     0 |          0 |       100 |  0.00 |
 +----------------+------+-------+------------+-----------+-------+
 * Note: Each Block RAM Tile only has one FIFO logic available and therefore can accommodate only one FIFO36E1 or one FIFO18E1. However, if a FIFO18E1 occupies a Block RAM Tile, that tile can still accommodate a RAMB18E1
 
@@ -83,7 +83,7 @@ Warning! For any ECO changes, please run place_design if there are unplaced inst
 +-----------+------+-------+------------+-----------+-------+
 | Site Type | Used | Fixed | Prohibited | Available | Util% |
 +-----------+------+-------+------------+-----------+-------+
-| DSPs      |    0 |     0 |          0 |       240 |  0.00 |
+| DSPs      |    0 |     0 |          0 |        90 |  0.00 |
 +-----------+------+-------+------------+-----------+-------+
 
 
@@ -93,17 +93,17 @@ Warning! For any ECO changes, please run place_design if there are unplaced inst
 +-----------------------------+------+-------+------------+-----------+-------+
 |          Site Type          | Used | Fixed | Prohibited | Available | Util% |
 +-----------------------------+------+-------+------------+-----------+-------+
-| Bonded IOB                  |    8 |     0 |          0 |       210 |  3.81 |
+| Bonded IOB                  |   98 |     0 |          0 |       210 | 46.67 |
 | Bonded IPADs                |    0 |     0 |          0 |         2 |  0.00 |
-| PHY_CONTROL                 |    0 |     0 |          0 |         6 |  0.00 |
-| PHASER_REF                  |    0 |     0 |          0 |         6 |  0.00 |
-| OUT_FIFO                    |    0 |     0 |          0 |        24 |  0.00 |
-| IN_FIFO                     |    0 |     0 |          0 |        24 |  0.00 |
-| IDELAYCTRL                  |    0 |     0 |          0 |         6 |  0.00 |
+| PHY_CONTROL                 |    0 |     0 |          0 |         5 |  0.00 |
+| PHASER_REF                  |    0 |     0 |          0 |         5 |  0.00 |
+| OUT_FIFO                    |    0 |     0 |          0 |        20 |  0.00 |
+| IN_FIFO                     |    0 |     0 |          0 |        20 |  0.00 |
+| IDELAYCTRL                  |    0 |     0 |          0 |         5 |  0.00 |
 | IBUFDS                      |    0 |     0 |          0 |       202 |  0.00 |
-| PHASER_OUT/PHASER_OUT_PHY   |    0 |     0 |          0 |        24 |  0.00 |
-| PHASER_IN/PHASER_IN_PHY     |    0 |     0 |          0 |        24 |  0.00 |
-| IDELAYE2/IDELAYE2_FINEDELAY |    0 |     0 |          0 |       300 |  0.00 |
+| PHASER_OUT/PHASER_OUT_PHY   |    0 |     0 |          0 |        20 |  0.00 |
+| PHASER_IN/PHASER_IN_PHY     |    0 |     0 |          0 |        20 |  0.00 |
+| IDELAYE2/IDELAYE2_FINEDELAY |    0 |     0 |          0 |       250 |  0.00 |
 | ILOGIC                      |    0 |     0 |          0 |       210 |  0.00 |
 | OLOGIC                      |    0 |     0 |          0 |       210 |  0.00 |
 +-----------------------------+------+-------+------------+-----------+-------+
@@ -116,12 +116,12 @@ Warning! For any ECO changes, please run place_design if there are unplaced inst
 |  Site Type | Used | Fixed | Prohibited | Available | Util% |
 +------------+------+-------+------------+-----------+-------+
 | BUFGCTRL   |    0 |     0 |          0 |        32 |  0.00 |
-| BUFIO      |    0 |     0 |          0 |        24 |  0.00 |
-| MMCME2_ADV |    0 |     0 |          0 |         6 |  0.00 |
-| PLLE2_ADV  |    0 |     0 |          0 |         6 |  0.00 |
-| BUFMRCE    |    0 |     0 |          0 |        12 |  0.00 |
-| BUFHCE     |    0 |     0 |          0 |        96 |  0.00 |
-| BUFR       |    0 |     0 |          0 |        24 |  0.00 |
+| BUFIO      |    0 |     0 |          0 |        20 |  0.00 |
+| MMCME2_ADV |    0 |     0 |          0 |         5 |  0.00 |
+| PLLE2_ADV  |    0 |     0 |          0 |         5 |  0.00 |
+| BUFMRCE    |    0 |     0 |          0 |        10 |  0.00 |
+| BUFHCE     |    0 |     0 |          0 |        72 |  0.00 |
+| BUFR       |    0 |     0 |          0 |        20 |  0.00 |
 +------------+------+-------+------------+-----------+-------+
 
 
@@ -149,10 +149,13 @@ Warning! For any ECO changes, please run place_design if there are unplaced inst
 +----------+------+---------------------+
 | Ref Name | Used | Functional Category |
 +----------+------+---------------------+
-| IBUF     |    5 |                  IO |
-| OBUF     |    3 |                  IO |
-| LUT5     |    1 |                 LUT |
-| LUT3     |    1 |                 LUT |
+| IBUF     |   65 |                  IO |
+| OBUF     |   33 |                  IO |
+| LUT6     |   29 |                 LUT |
+| LUT3     |   24 |                 LUT |
+| LUT5     |   17 |                 LUT |
+| LUT2     |   10 |                 LUT |
+| LUT4     |    8 |                 LUT |
 +----------+------+---------------------+
 
 
@@ -170,4 +173,5 @@ Warning! For any ECO changes, please run place_design if there are unplaced inst
 +----------+------+
 | Ref Name | Used |
 +----------+------+
+
 

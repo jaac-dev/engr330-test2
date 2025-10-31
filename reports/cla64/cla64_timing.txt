@@ -1,0 +1,605 @@
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved. Copyright 2022-2024 Advanced Micro Devices, Inc. All Rights Reserved.
+---------------------------------------------------------------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2024.2 (win64) Build 5239630 Fri Nov 08 22:35:27 MST 2024
+| Date         : Thu Oct 30 23:02:12 2025
+| Host         : XPS15 running 64-bit major release  (build 9200)
+| Command      : report_timing -file ./reports/cla64/cla64_timing.txt -max_paths 10
+| Design       : cla
+| Device       : 7a35t-csg324
+| Speed File   : -1  PRODUCTION 1.23 2018-06-13
+| Design State : Synthesized
+---------------------------------------------------------------------------------------------------------------------------------------------
+
+Timing Report
+
+Slack (MET) :             86.605ns  (required time - arrival time)
+  Source:                 b[1]
+                            (input port)
+  Destination:            y[54]
+  Path Group:             **default**
+  Path Type:              Max at Slow Process Corner
+  Requirement:            100.000ns  (MaxDelay Path 100.000ns)
+  Data Path Delay:        13.395ns  (logic 5.363ns (40.040%)  route 8.031ns (59.960%))
+  Logic Levels:           16  (IBUF=1 LUT3=2 LUT5=1 LUT6=11 OBUF=1)
+  Output Delay:           0.000ns
+  Timing Exception:       MaxDelay Path 100.000ns -datapath_only
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                                                      0.000     0.000 r  b[1] (IN)
+                         net (fo=0)                   0.000     0.000    b[1]
+                         IBUF (Prop_ibuf_I_O)         0.973     0.973 r  b_IBUF[1]_inst/O
+                         net (fo=6, unplaced)         0.800     1.773    b_IBUF[1]
+                         LUT5 (Prop_lut5_I3_O)        0.150     1.923 f  y_OBUF[2]_inst_i_2/O
+                         net (fo=4, unplaced)         0.926     2.849    y_OBUF[2]_inst_i_2_n_0
+                         LUT6 (Prop_lut6_I1_O)        0.124     2.973 f  y_OBUF[21]_inst_i_9/O
+                         net (fo=1, unplaced)         0.449     3.422    y_OBUF[21]_inst_i_9_n_0
+                         LUT6 (Prop_lut6_I3_O)        0.124     3.546 f  y_OBUF[21]_inst_i_7/O
+                         net (fo=2, unplaced)         0.460     4.006    y_OBUF[21]_inst_i_7_n_0
+                         LUT6 (Prop_lut6_I1_O)        0.124     4.130 f  y_OBUF[25]_inst_i_9/O
+                         net (fo=1, unplaced)         0.449     4.579    y_OBUF[25]_inst_i_9_n_0
+                         LUT6 (Prop_lut6_I4_O)        0.124     4.703 f  y_OBUF[25]_inst_i_5/O
+                         net (fo=2, unplaced)         0.460     5.163    y_OBUF[25]_inst_i_5_n_0
+                         LUT6 (Prop_lut6_I1_O)        0.124     5.287 f  y_OBUF[48]_inst_i_15/O
+                         net (fo=1, unplaced)         0.449     5.736    y_OBUF[48]_inst_i_15_n_0
+                         LUT6 (Prop_lut6_I3_O)        0.124     5.860 f  y_OBUF[48]_inst_i_13/O
+                         net (fo=2, unplaced)         0.460     6.320    y_OBUF[48]_inst_i_13_n_0
+                         LUT6 (Prop_lut6_I4_O)        0.124     6.444 f  y_OBUF[48]_inst_i_10/O
+                         net (fo=2, unplaced)         0.460     6.904    y_OBUF[48]_inst_i_10_n_0
+                         LUT6 (Prop_lut6_I1_O)        0.124     7.028 r  y_OBUF[48]_inst_i_9/O
+                         net (fo=1, unplaced)         0.449     7.477    y_OBUF[48]_inst_i_9_n_0
+                         LUT6 (Prop_lut6_I3_O)        0.124     7.601 f  y_OBUF[48]_inst_i_3/O
+                         net (fo=4, unplaced)         0.473     8.074    y_OBUF[48]_inst_i_3_n_0
+                         LUT6 (Prop_lut6_I4_O)        0.124     8.198 f  y_OBUF[52]_inst_i_5/O
+                         net (fo=5, unplaced)         0.477     8.675    y_OBUF[52]_inst_i_5_n_0
+                         LUT6 (Prop_lut6_I0_O)        0.124     8.799 r  y_OBUF[53]_inst_i_2/O
+                         net (fo=2, unplaced)         0.460     9.259    y_OBUF[53]_inst_i_2_n_0
+                         LUT3 (Prop_lut3_I0_O)        0.116     9.375 r  y_OBUF[55]_inst_i_2/O
+                         net (fo=2, unplaced)         0.460     9.835    y_OBUF[55]_inst_i_2_n_0
+                         LUT3 (Prop_lut3_I2_O)        0.124     9.959 r  y_OBUF[54]_inst_i_1/O
+                         net (fo=1, unplaced)         0.800    10.759    y_OBUF[54]
+                         OBUF (Prop_obuf_I_O)         2.636    13.395 r  y_OBUF[54]_inst/O
+                         net (fo=0)                   0.000    13.395    y[54]
+                                                                      r  y[54] (OUT)
+  -------------------------------------------------------------------    -------------------
+
+                         max delay                  100.000   100.000    
+                         output delay                -0.000   100.000    
+  -------------------------------------------------------------------
+                         required time                        100.000    
+                         arrival time                         -13.395    
+  -------------------------------------------------------------------
+                         slack                                 86.605    
+
+Slack (MET) :             86.613ns  (required time - arrival time)
+  Source:                 b[1]
+                            (input port)
+  Destination:            y[55]
+  Path Group:             **default**
+  Path Type:              Max at Slow Process Corner
+  Requirement:            100.000ns  (MaxDelay Path 100.000ns)
+  Data Path Delay:        13.387ns  (logic 5.355ns (40.004%)  route 8.031ns (59.996%))
+  Logic Levels:           16  (IBUF=1 LUT3=1 LUT5=2 LUT6=11 OBUF=1)
+  Output Delay:           0.000ns
+  Timing Exception:       MaxDelay Path 100.000ns -datapath_only
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                                                      0.000     0.000 r  b[1] (IN)
+                         net (fo=0)                   0.000     0.000    b[1]
+                         IBUF (Prop_ibuf_I_O)         0.973     0.973 r  b_IBUF[1]_inst/O
+                         net (fo=6, unplaced)         0.800     1.773    b_IBUF[1]
+                         LUT5 (Prop_lut5_I3_O)        0.150     1.923 f  y_OBUF[2]_inst_i_2/O
+                         net (fo=4, unplaced)         0.926     2.849    y_OBUF[2]_inst_i_2_n_0
+                         LUT6 (Prop_lut6_I1_O)        0.124     2.973 f  y_OBUF[21]_inst_i_9/O
+                         net (fo=1, unplaced)         0.449     3.422    y_OBUF[21]_inst_i_9_n_0
+                         LUT6 (Prop_lut6_I3_O)        0.124     3.546 f  y_OBUF[21]_inst_i_7/O
+                         net (fo=2, unplaced)         0.460     4.006    y_OBUF[21]_inst_i_7_n_0
+                         LUT6 (Prop_lut6_I1_O)        0.124     4.130 f  y_OBUF[25]_inst_i_9/O
+                         net (fo=1, unplaced)         0.449     4.579    y_OBUF[25]_inst_i_9_n_0
+                         LUT6 (Prop_lut6_I4_O)        0.124     4.703 f  y_OBUF[25]_inst_i_5/O
+                         net (fo=2, unplaced)         0.460     5.163    y_OBUF[25]_inst_i_5_n_0
+                         LUT6 (Prop_lut6_I1_O)        0.124     5.287 f  y_OBUF[48]_inst_i_15/O
+                         net (fo=1, unplaced)         0.449     5.736    y_OBUF[48]_inst_i_15_n_0
+                         LUT6 (Prop_lut6_I3_O)        0.124     5.860 f  y_OBUF[48]_inst_i_13/O
+                         net (fo=2, unplaced)         0.460     6.320    y_OBUF[48]_inst_i_13_n_0
+                         LUT6 (Prop_lut6_I4_O)        0.124     6.444 f  y_OBUF[48]_inst_i_10/O
+                         net (fo=2, unplaced)         0.460     6.904    y_OBUF[48]_inst_i_10_n_0
+                         LUT6 (Prop_lut6_I1_O)        0.124     7.028 r  y_OBUF[48]_inst_i_9/O
+                         net (fo=1, unplaced)         0.449     7.477    y_OBUF[48]_inst_i_9_n_0
+                         LUT6 (Prop_lut6_I3_O)        0.124     7.601 f  y_OBUF[48]_inst_i_3/O
+                         net (fo=4, unplaced)         0.473     8.074    y_OBUF[48]_inst_i_3_n_0
+                         LUT6 (Prop_lut6_I4_O)        0.124     8.198 f  y_OBUF[52]_inst_i_5/O
+                         net (fo=5, unplaced)         0.477     8.675    y_OBUF[52]_inst_i_5_n_0
+                         LUT6 (Prop_lut6_I0_O)        0.124     8.799 r  y_OBUF[53]_inst_i_2/O
+                         net (fo=2, unplaced)         0.460     9.259    y_OBUF[53]_inst_i_2_n_0
+                         LUT3 (Prop_lut3_I0_O)        0.116     9.375 r  y_OBUF[55]_inst_i_2/O
+                         net (fo=2, unplaced)         0.460     9.835    y_OBUF[55]_inst_i_2_n_0
+                         LUT5 (Prop_lut5_I4_O)        0.116     9.951 r  y_OBUF[55]_inst_i_1/O
+                         net (fo=1, unplaced)         0.800    10.751    y_OBUF[55]
+                         OBUF (Prop_obuf_I_O)         2.636    13.387 r  y_OBUF[55]_inst/O
+                         net (fo=0)                   0.000    13.387    y[55]
+                                                                      r  y[55] (OUT)
+  -------------------------------------------------------------------    -------------------
+
+                         max delay                  100.000   100.000    
+                         output delay                -0.000   100.000    
+  -------------------------------------------------------------------
+                         required time                        100.000    
+                         arrival time                         -13.387    
+  -------------------------------------------------------------------
+                         slack                                 86.613    
+
+Slack (MET) :             86.643ns  (required time - arrival time)
+  Source:                 b[1]
+                            (input port)
+  Destination:            y[58]
+  Path Group:             **default**
+  Path Type:              Max at Slow Process Corner
+  Requirement:            100.000ns  (MaxDelay Path 100.000ns)
+  Data Path Delay:        13.357ns  (logic 5.371ns (40.214%)  route 7.985ns (59.786%))
+  Logic Levels:           16  (IBUF=1 LUT3=2 LUT5=1 LUT6=11 OBUF=1)
+  Output Delay:           0.000ns
+  Timing Exception:       MaxDelay Path 100.000ns -datapath_only
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                                                      0.000     0.000 r  b[1] (IN)
+                         net (fo=0)                   0.000     0.000    b[1]
+                         IBUF (Prop_ibuf_I_O)         0.973     0.973 r  b_IBUF[1]_inst/O
+                         net (fo=6, unplaced)         0.800     1.773    b_IBUF[1]
+                         LUT5 (Prop_lut5_I3_O)        0.150     1.923 f  y_OBUF[2]_inst_i_2/O
+                         net (fo=4, unplaced)         0.926     2.849    y_OBUF[2]_inst_i_2_n_0
+                         LUT6 (Prop_lut6_I1_O)        0.124     2.973 f  y_OBUF[21]_inst_i_9/O
+                         net (fo=1, unplaced)         0.449     3.422    y_OBUF[21]_inst_i_9_n_0
+                         LUT6 (Prop_lut6_I3_O)        0.124     3.546 f  y_OBUF[21]_inst_i_7/O
+                         net (fo=2, unplaced)         0.460     4.006    y_OBUF[21]_inst_i_7_n_0
+                         LUT6 (Prop_lut6_I1_O)        0.124     4.130 f  y_OBUF[25]_inst_i_9/O
+                         net (fo=1, unplaced)         0.449     4.579    y_OBUF[25]_inst_i_9_n_0
+                         LUT6 (Prop_lut6_I4_O)        0.124     4.703 f  y_OBUF[25]_inst_i_5/O
+                         net (fo=2, unplaced)         0.460     5.163    y_OBUF[25]_inst_i_5_n_0
+                         LUT6 (Prop_lut6_I1_O)        0.124     5.287 f  y_OBUF[48]_inst_i_15/O
+                         net (fo=1, unplaced)         0.449     5.736    y_OBUF[48]_inst_i_15_n_0
+                         LUT6 (Prop_lut6_I3_O)        0.124     5.860 f  y_OBUF[48]_inst_i_13/O
+                         net (fo=2, unplaced)         0.460     6.320    y_OBUF[48]_inst_i_13_n_0
+                         LUT6 (Prop_lut6_I1_O)        0.124     6.444 f  y_OBUF[57]_inst_i_11/O
+                         net (fo=1, unplaced)         0.449     6.893    y_OBUF[57]_inst_i_11_n_0
+                         LUT6 (Prop_lut6_I3_O)        0.124     7.017 r  y_OBUF[57]_inst_i_9/O
+                         net (fo=1, unplaced)         0.449     7.466    y_OBUF[57]_inst_i_9_n_0
+                         LUT6 (Prop_lut6_I2_O)        0.124     7.590 f  y_OBUF[57]_inst_i_7/O
+                         net (fo=1, unplaced)         0.449     8.039    y_OBUF[57]_inst_i_7_n_0
+                         LUT6 (Prop_lut6_I2_O)        0.124     8.163 r  y_OBUF[57]_inst_i_6/O
+                         net (fo=1, unplaced)         0.449     8.612    y_OBUF[57]_inst_i_6_n_0
+                         LUT6 (Prop_lut6_I3_O)        0.124     8.736 f  y_OBUF[57]_inst_i_2/O
+                         net (fo=5, unplaced)         0.477     9.213    y_OBUF[57]_inst_i_2_n_0
+                         LUT3 (Prop_lut3_I0_O)        0.124     9.337 r  y_OBUF[59]_inst_i_2/O
+                         net (fo=2, unplaced)         0.460     9.797    y_OBUF[59]_inst_i_2_n_0
+                         LUT3 (Prop_lut3_I2_O)        0.124     9.921 r  y_OBUF[58]_inst_i_1/O
+                         net (fo=1, unplaced)         0.800    10.721    y_OBUF[58]
+                         OBUF (Prop_obuf_I_O)         2.636    13.357 r  y_OBUF[58]_inst/O
+                         net (fo=0)                   0.000    13.357    y[58]
+                                                                      r  y[58] (OUT)
+  -------------------------------------------------------------------    -------------------
+
+                         max delay                  100.000   100.000    
+                         output delay                -0.000   100.000    
+  -------------------------------------------------------------------
+                         required time                        100.000    
+                         arrival time                         -13.357    
+  -------------------------------------------------------------------
+                         slack                                 86.643    
+
+Slack (MET) :             86.643ns  (required time - arrival time)
+  Source:                 b[1]
+                            (input port)
+  Destination:            y[59]
+  Path Group:             **default**
+  Path Type:              Max at Slow Process Corner
+  Requirement:            100.000ns  (MaxDelay Path 100.000ns)
+  Data Path Delay:        13.357ns  (logic 5.371ns (40.214%)  route 7.985ns (59.786%))
+  Logic Levels:           16  (IBUF=1 LUT3=1 LUT5=2 LUT6=11 OBUF=1)
+  Output Delay:           0.000ns
+  Timing Exception:       MaxDelay Path 100.000ns -datapath_only
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                                                      0.000     0.000 r  b[1] (IN)
+                         net (fo=0)                   0.000     0.000    b[1]
+                         IBUF (Prop_ibuf_I_O)         0.973     0.973 r  b_IBUF[1]_inst/O
+                         net (fo=6, unplaced)         0.800     1.773    b_IBUF[1]
+                         LUT5 (Prop_lut5_I3_O)        0.150     1.923 f  y_OBUF[2]_inst_i_2/O
+                         net (fo=4, unplaced)         0.926     2.849    y_OBUF[2]_inst_i_2_n_0
+                         LUT6 (Prop_lut6_I1_O)        0.124     2.973 f  y_OBUF[21]_inst_i_9/O
+                         net (fo=1, unplaced)         0.449     3.422    y_OBUF[21]_inst_i_9_n_0
+                         LUT6 (Prop_lut6_I3_O)        0.124     3.546 f  y_OBUF[21]_inst_i_7/O
+                         net (fo=2, unplaced)         0.460     4.006    y_OBUF[21]_inst_i_7_n_0
+                         LUT6 (Prop_lut6_I1_O)        0.124     4.130 f  y_OBUF[25]_inst_i_9/O
+                         net (fo=1, unplaced)         0.449     4.579    y_OBUF[25]_inst_i_9_n_0
+                         LUT6 (Prop_lut6_I4_O)        0.124     4.703 f  y_OBUF[25]_inst_i_5/O
+                         net (fo=2, unplaced)         0.460     5.163    y_OBUF[25]_inst_i_5_n_0
+                         LUT6 (Prop_lut6_I1_O)        0.124     5.287 f  y_OBUF[48]_inst_i_15/O
+                         net (fo=1, unplaced)         0.449     5.736    y_OBUF[48]_inst_i_15_n_0
+                         LUT6 (Prop_lut6_I3_O)        0.124     5.860 f  y_OBUF[48]_inst_i_13/O
+                         net (fo=2, unplaced)         0.460     6.320    y_OBUF[48]_inst_i_13_n_0
+                         LUT6 (Prop_lut6_I1_O)        0.124     6.444 f  y_OBUF[57]_inst_i_11/O
+                         net (fo=1, unplaced)         0.449     6.893    y_OBUF[57]_inst_i_11_n_0
+                         LUT6 (Prop_lut6_I3_O)        0.124     7.017 r  y_OBUF[57]_inst_i_9/O
+                         net (fo=1, unplaced)         0.449     7.466    y_OBUF[57]_inst_i_9_n_0
+                         LUT6 (Prop_lut6_I2_O)        0.124     7.590 f  y_OBUF[57]_inst_i_7/O
+                         net (fo=1, unplaced)         0.449     8.039    y_OBUF[57]_inst_i_7_n_0
+                         LUT6 (Prop_lut6_I2_O)        0.124     8.163 r  y_OBUF[57]_inst_i_6/O
+                         net (fo=1, unplaced)         0.449     8.612    y_OBUF[57]_inst_i_6_n_0
+                         LUT6 (Prop_lut6_I3_O)        0.124     8.736 f  y_OBUF[57]_inst_i_2/O
+                         net (fo=5, unplaced)         0.477     9.213    y_OBUF[57]_inst_i_2_n_0
+                         LUT3 (Prop_lut3_I0_O)        0.124     9.337 r  y_OBUF[59]_inst_i_2/O
+                         net (fo=2, unplaced)         0.460     9.797    y_OBUF[59]_inst_i_2_n_0
+                         LUT5 (Prop_lut5_I4_O)        0.124     9.921 r  y_OBUF[59]_inst_i_1/O
+                         net (fo=1, unplaced)         0.800    10.721    y_OBUF[59]
+                         OBUF (Prop_obuf_I_O)         2.636    13.357 r  y_OBUF[59]_inst/O
+                         net (fo=0)                   0.000    13.357    y[59]
+                                                                      r  y[59] (OUT)
+  -------------------------------------------------------------------    -------------------
+
+                         max delay                  100.000   100.000    
+                         output delay                -0.000   100.000    
+  -------------------------------------------------------------------
+                         required time                        100.000    
+                         arrival time                         -13.357    
+  -------------------------------------------------------------------
+                         slack                                 86.643    
+
+Slack (MET) :             86.643ns  (required time - arrival time)
+  Source:                 b[1]
+                            (input port)
+  Destination:            y[63]
+  Path Group:             **default**
+  Path Type:              Max at Slow Process Corner
+  Requirement:            100.000ns  (MaxDelay Path 100.000ns)
+  Data Path Delay:        13.357ns  (logic 5.371ns (40.214%)  route 7.985ns (59.786%))
+  Logic Levels:           16  (IBUF=1 LUT5=1 LUT6=13 OBUF=1)
+  Output Delay:           0.000ns
+  Timing Exception:       MaxDelay Path 100.000ns -datapath_only
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                                                      0.000     0.000 r  b[1] (IN)
+                         net (fo=0)                   0.000     0.000    b[1]
+                         IBUF (Prop_ibuf_I_O)         0.973     0.973 r  b_IBUF[1]_inst/O
+                         net (fo=6, unplaced)         0.800     1.773    b_IBUF[1]
+                         LUT5 (Prop_lut5_I3_O)        0.150     1.923 r  y_OBUF[2]_inst_i_2/O
+                         net (fo=4, unplaced)         0.926     2.849    y_OBUF[2]_inst_i_2_n_0
+                         LUT6 (Prop_lut6_I1_O)        0.124     2.973 r  y_OBUF[21]_inst_i_9/O
+                         net (fo=1, unplaced)         0.449     3.422    y_OBUF[21]_inst_i_9_n_0
+                         LUT6 (Prop_lut6_I3_O)        0.124     3.546 r  y_OBUF[21]_inst_i_7/O
+                         net (fo=2, unplaced)         0.460     4.006    y_OBUF[21]_inst_i_7_n_0
+                         LUT6 (Prop_lut6_I1_O)        0.124     4.130 r  y_OBUF[25]_inst_i_9/O
+                         net (fo=1, unplaced)         0.449     4.579    y_OBUF[25]_inst_i_9_n_0
+                         LUT6 (Prop_lut6_I4_O)        0.124     4.703 r  y_OBUF[25]_inst_i_5/O
+                         net (fo=2, unplaced)         0.460     5.163    y_OBUF[25]_inst_i_5_n_0
+                         LUT6 (Prop_lut6_I1_O)        0.124     5.287 r  y_OBUF[48]_inst_i_15/O
+                         net (fo=1, unplaced)         0.449     5.736    y_OBUF[48]_inst_i_15_n_0
+                         LUT6 (Prop_lut6_I3_O)        0.124     5.860 r  y_OBUF[48]_inst_i_13/O
+                         net (fo=2, unplaced)         0.460     6.320    y_OBUF[48]_inst_i_13_n_0
+                         LUT6 (Prop_lut6_I1_O)        0.124     6.444 r  y_OBUF[57]_inst_i_11/O
+                         net (fo=1, unplaced)         0.449     6.893    y_OBUF[57]_inst_i_11_n_0
+                         LUT6 (Prop_lut6_I3_O)        0.124     7.017 f  y_OBUF[57]_inst_i_9/O
+                         net (fo=1, unplaced)         0.449     7.466    y_OBUF[57]_inst_i_9_n_0
+                         LUT6 (Prop_lut6_I2_O)        0.124     7.590 r  y_OBUF[57]_inst_i_7/O
+                         net (fo=1, unplaced)         0.449     8.039    y_OBUF[57]_inst_i_7_n_0
+                         LUT6 (Prop_lut6_I2_O)        0.124     8.163 f  y_OBUF[57]_inst_i_6/O
+                         net (fo=1, unplaced)         0.449     8.612    y_OBUF[57]_inst_i_6_n_0
+                         LUT6 (Prop_lut6_I3_O)        0.124     8.736 r  y_OBUF[57]_inst_i_2/O
+                         net (fo=5, unplaced)         0.477     9.213    y_OBUF[57]_inst_i_2_n_0
+                         LUT6 (Prop_lut6_I4_O)        0.124     9.337 r  y_OBUF[63]_inst_i_2/O
+                         net (fo=2, unplaced)         0.460     9.797    y_OBUF[63]_inst_i_2_n_0
+                         LUT6 (Prop_lut6_I0_O)        0.124     9.921 r  y_OBUF[63]_inst_i_1/O
+                         net (fo=1, unplaced)         0.800    10.721    y_OBUF[63]
+                         OBUF (Prop_obuf_I_O)         2.636    13.357 r  y_OBUF[63]_inst/O
+                         net (fo=0)                   0.000    13.357    y[63]
+                                                                      r  y[63] (OUT)
+  -------------------------------------------------------------------    -------------------
+
+                         max delay                  100.000   100.000    
+                         output delay                -0.000   100.000    
+  -------------------------------------------------------------------
+                         required time                        100.000    
+                         arrival time                         -13.357    
+  -------------------------------------------------------------------
+                         slack                                 86.643    
+
+Slack (MET) :             86.651ns  (required time - arrival time)
+  Source:                 b[1]
+                            (input port)
+  Destination:            y[60]
+  Path Group:             **default**
+  Path Type:              Max at Slow Process Corner
+  Requirement:            100.000ns  (MaxDelay Path 100.000ns)
+  Data Path Delay:        13.349ns  (logic 5.363ns (40.178%)  route 7.985ns (59.822%))
+  Logic Levels:           16  (IBUF=1 LUT3=1 LUT5=2 LUT6=11 OBUF=1)
+  Output Delay:           0.000ns
+  Timing Exception:       MaxDelay Path 100.000ns -datapath_only
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                                                      0.000     0.000 r  b[1] (IN)
+                         net (fo=0)                   0.000     0.000    b[1]
+                         IBUF (Prop_ibuf_I_O)         0.973     0.973 r  b_IBUF[1]_inst/O
+                         net (fo=6, unplaced)         0.800     1.773    b_IBUF[1]
+                         LUT5 (Prop_lut5_I3_O)        0.150     1.923 r  y_OBUF[2]_inst_i_2/O
+                         net (fo=4, unplaced)         0.926     2.849    y_OBUF[2]_inst_i_2_n_0
+                         LUT6 (Prop_lut6_I1_O)        0.124     2.973 r  y_OBUF[21]_inst_i_9/O
+                         net (fo=1, unplaced)         0.449     3.422    y_OBUF[21]_inst_i_9_n_0
+                         LUT6 (Prop_lut6_I3_O)        0.124     3.546 r  y_OBUF[21]_inst_i_7/O
+                         net (fo=2, unplaced)         0.460     4.006    y_OBUF[21]_inst_i_7_n_0
+                         LUT6 (Prop_lut6_I1_O)        0.124     4.130 r  y_OBUF[25]_inst_i_9/O
+                         net (fo=1, unplaced)         0.449     4.579    y_OBUF[25]_inst_i_9_n_0
+                         LUT6 (Prop_lut6_I4_O)        0.124     4.703 r  y_OBUF[25]_inst_i_5/O
+                         net (fo=2, unplaced)         0.460     5.163    y_OBUF[25]_inst_i_5_n_0
+                         LUT6 (Prop_lut6_I1_O)        0.124     5.287 r  y_OBUF[48]_inst_i_15/O
+                         net (fo=1, unplaced)         0.449     5.736    y_OBUF[48]_inst_i_15_n_0
+                         LUT6 (Prop_lut6_I3_O)        0.124     5.860 r  y_OBUF[48]_inst_i_13/O
+                         net (fo=2, unplaced)         0.460     6.320    y_OBUF[48]_inst_i_13_n_0
+                         LUT6 (Prop_lut6_I1_O)        0.124     6.444 r  y_OBUF[57]_inst_i_11/O
+                         net (fo=1, unplaced)         0.449     6.893    y_OBUF[57]_inst_i_11_n_0
+                         LUT6 (Prop_lut6_I3_O)        0.124     7.017 f  y_OBUF[57]_inst_i_9/O
+                         net (fo=1, unplaced)         0.449     7.466    y_OBUF[57]_inst_i_9_n_0
+                         LUT6 (Prop_lut6_I2_O)        0.124     7.590 r  y_OBUF[57]_inst_i_7/O
+                         net (fo=1, unplaced)         0.449     8.039    y_OBUF[57]_inst_i_7_n_0
+                         LUT6 (Prop_lut6_I2_O)        0.124     8.163 f  y_OBUF[57]_inst_i_6/O
+                         net (fo=1, unplaced)         0.449     8.612    y_OBUF[57]_inst_i_6_n_0
+                         LUT6 (Prop_lut6_I3_O)        0.124     8.736 r  y_OBUF[57]_inst_i_2/O
+                         net (fo=5, unplaced)         0.477     9.213    y_OBUF[57]_inst_i_2_n_0
+                         LUT5 (Prop_lut5_I3_O)        0.116     9.329 r  y_OBUF[61]_inst_i_2/O
+                         net (fo=2, unplaced)         0.460     9.789    y_OBUF[61]_inst_i_2_n_0
+                         LUT3 (Prop_lut3_I0_O)        0.124     9.913 r  y_OBUF[60]_inst_i_1/O
+                         net (fo=1, unplaced)         0.800    10.713    y_OBUF[60]
+                         OBUF (Prop_obuf_I_O)         2.636    13.349 r  y_OBUF[60]_inst/O
+                         net (fo=0)                   0.000    13.349    y[60]
+                                                                      r  y[60] (OUT)
+  -------------------------------------------------------------------    -------------------
+
+                         max delay                  100.000   100.000    
+                         output delay                -0.000   100.000    
+  -------------------------------------------------------------------
+                         required time                        100.000    
+                         arrival time                         -13.349    
+  -------------------------------------------------------------------
+                         slack                                 86.651    
+
+Slack (MET) :             86.651ns  (required time - arrival time)
+  Source:                 b[1]
+                            (input port)
+  Destination:            y[62]
+  Path Group:             **default**
+  Path Type:              Max at Slow Process Corner
+  Requirement:            100.000ns  (MaxDelay Path 100.000ns)
+  Data Path Delay:        13.349ns  (logic 5.363ns (40.178%)  route 7.985ns (59.822%))
+  Logic Levels:           16  (IBUF=1 LUT5=2 LUT6=12 OBUF=1)
+  Output Delay:           0.000ns
+  Timing Exception:       MaxDelay Path 100.000ns -datapath_only
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                                                      0.000     0.000 r  b[1] (IN)
+                         net (fo=0)                   0.000     0.000    b[1]
+                         IBUF (Prop_ibuf_I_O)         0.973     0.973 r  b_IBUF[1]_inst/O
+                         net (fo=6, unplaced)         0.800     1.773    b_IBUF[1]
+                         LUT5 (Prop_lut5_I3_O)        0.150     1.923 r  y_OBUF[2]_inst_i_2/O
+                         net (fo=4, unplaced)         0.926     2.849    y_OBUF[2]_inst_i_2_n_0
+                         LUT6 (Prop_lut6_I1_O)        0.124     2.973 r  y_OBUF[21]_inst_i_9/O
+                         net (fo=1, unplaced)         0.449     3.422    y_OBUF[21]_inst_i_9_n_0
+                         LUT6 (Prop_lut6_I3_O)        0.124     3.546 r  y_OBUF[21]_inst_i_7/O
+                         net (fo=2, unplaced)         0.460     4.006    y_OBUF[21]_inst_i_7_n_0
+                         LUT6 (Prop_lut6_I1_O)        0.124     4.130 r  y_OBUF[25]_inst_i_9/O
+                         net (fo=1, unplaced)         0.449     4.579    y_OBUF[25]_inst_i_9_n_0
+                         LUT6 (Prop_lut6_I4_O)        0.124     4.703 r  y_OBUF[25]_inst_i_5/O
+                         net (fo=2, unplaced)         0.460     5.163    y_OBUF[25]_inst_i_5_n_0
+                         LUT6 (Prop_lut6_I1_O)        0.124     5.287 r  y_OBUF[48]_inst_i_15/O
+                         net (fo=1, unplaced)         0.449     5.736    y_OBUF[48]_inst_i_15_n_0
+                         LUT6 (Prop_lut6_I3_O)        0.124     5.860 r  y_OBUF[48]_inst_i_13/O
+                         net (fo=2, unplaced)         0.460     6.320    y_OBUF[48]_inst_i_13_n_0
+                         LUT6 (Prop_lut6_I1_O)        0.124     6.444 r  y_OBUF[57]_inst_i_11/O
+                         net (fo=1, unplaced)         0.449     6.893    y_OBUF[57]_inst_i_11_n_0
+                         LUT6 (Prop_lut6_I3_O)        0.124     7.017 f  y_OBUF[57]_inst_i_9/O
+                         net (fo=1, unplaced)         0.449     7.466    y_OBUF[57]_inst_i_9_n_0
+                         LUT6 (Prop_lut6_I2_O)        0.124     7.590 r  y_OBUF[57]_inst_i_7/O
+                         net (fo=1, unplaced)         0.449     8.039    y_OBUF[57]_inst_i_7_n_0
+                         LUT6 (Prop_lut6_I2_O)        0.124     8.163 f  y_OBUF[57]_inst_i_6/O
+                         net (fo=1, unplaced)         0.449     8.612    y_OBUF[57]_inst_i_6_n_0
+                         LUT6 (Prop_lut6_I3_O)        0.124     8.736 r  y_OBUF[57]_inst_i_2/O
+                         net (fo=5, unplaced)         0.477     9.213    y_OBUF[57]_inst_i_2_n_0
+                         LUT6 (Prop_lut6_I4_O)        0.124     9.337 r  y_OBUF[63]_inst_i_2/O
+                         net (fo=2, unplaced)         0.460     9.797    y_OBUF[63]_inst_i_2_n_0
+                         LUT5 (Prop_lut5_I0_O)        0.116     9.913 r  y_OBUF[62]_inst_i_1/O
+                         net (fo=1, unplaced)         0.800    10.713    y_OBUF[62]
+                         OBUF (Prop_obuf_I_O)         2.636    13.349 r  y_OBUF[62]_inst/O
+                         net (fo=0)                   0.000    13.349    y[62]
+                                                                      r  y[62] (OUT)
+  -------------------------------------------------------------------    -------------------
+
+                         max delay                  100.000   100.000    
+                         output delay                -0.000   100.000    
+  -------------------------------------------------------------------
+                         required time                        100.000    
+                         arrival time                         -13.349    
+  -------------------------------------------------------------------
+                         slack                                 86.651    
+
+Slack (MET) :             86.654ns  (required time - arrival time)
+  Source:                 b[1]
+                            (input port)
+  Destination:            c_out
+  Path Group:             **default**
+  Path Type:              Max at Slow Process Corner
+  Requirement:            100.000ns  (MaxDelay Path 100.000ns)
+  Data Path Delay:        13.346ns  (logic 5.371ns (40.247%)  route 7.974ns (59.753%))
+  Logic Levels:           16  (IBUF=1 LUT5=1 LUT6=13 OBUF=1)
+  Output Delay:           0.000ns
+  Timing Exception:       MaxDelay Path 100.000ns -datapath_only
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                                                      0.000     0.000 r  b[1] (IN)
+                         net (fo=0)                   0.000     0.000    b[1]
+                         IBUF (Prop_ibuf_I_O)         0.973     0.973 r  b_IBUF[1]_inst/O
+                         net (fo=6, unplaced)         0.800     1.773    b_IBUF[1]
+                         LUT5 (Prop_lut5_I3_O)        0.150     1.923 r  y_OBUF[2]_inst_i_2/O
+                         net (fo=4, unplaced)         0.926     2.849    y_OBUF[2]_inst_i_2_n_0
+                         LUT6 (Prop_lut6_I1_O)        0.124     2.973 r  y_OBUF[21]_inst_i_9/O
+                         net (fo=1, unplaced)         0.449     3.422    y_OBUF[21]_inst_i_9_n_0
+                         LUT6 (Prop_lut6_I3_O)        0.124     3.546 r  y_OBUF[21]_inst_i_7/O
+                         net (fo=2, unplaced)         0.460     4.006    y_OBUF[21]_inst_i_7_n_0
+                         LUT6 (Prop_lut6_I1_O)        0.124     4.130 r  y_OBUF[25]_inst_i_9/O
+                         net (fo=1, unplaced)         0.449     4.579    y_OBUF[25]_inst_i_9_n_0
+                         LUT6 (Prop_lut6_I4_O)        0.124     4.703 r  y_OBUF[25]_inst_i_5/O
+                         net (fo=2, unplaced)         0.460     5.163    y_OBUF[25]_inst_i_5_n_0
+                         LUT6 (Prop_lut6_I1_O)        0.124     5.287 r  y_OBUF[48]_inst_i_15/O
+                         net (fo=1, unplaced)         0.449     5.736    y_OBUF[48]_inst_i_15_n_0
+                         LUT6 (Prop_lut6_I3_O)        0.124     5.860 r  y_OBUF[48]_inst_i_13/O
+                         net (fo=2, unplaced)         0.460     6.320    y_OBUF[48]_inst_i_13_n_0
+                         LUT6 (Prop_lut6_I1_O)        0.124     6.444 r  y_OBUF[57]_inst_i_11/O
+                         net (fo=1, unplaced)         0.449     6.893    y_OBUF[57]_inst_i_11_n_0
+                         LUT6 (Prop_lut6_I3_O)        0.124     7.017 f  y_OBUF[57]_inst_i_9/O
+                         net (fo=1, unplaced)         0.449     7.466    y_OBUF[57]_inst_i_9_n_0
+                         LUT6 (Prop_lut6_I2_O)        0.124     7.590 r  y_OBUF[57]_inst_i_7/O
+                         net (fo=1, unplaced)         0.449     8.039    y_OBUF[57]_inst_i_7_n_0
+                         LUT6 (Prop_lut6_I2_O)        0.124     8.163 f  y_OBUF[57]_inst_i_6/O
+                         net (fo=1, unplaced)         0.449     8.612    y_OBUF[57]_inst_i_6_n_0
+                         LUT6 (Prop_lut6_I3_O)        0.124     8.736 r  y_OBUF[57]_inst_i_2/O
+                         net (fo=5, unplaced)         0.477     9.213    y_OBUF[57]_inst_i_2_n_0
+                         LUT6 (Prop_lut6_I1_O)        0.124     9.337 r  c_out_OBUF_inst_i_6/O
+                         net (fo=1, unplaced)         0.449     9.786    c_out_OBUF_inst_i_6_n_0
+                         LUT6 (Prop_lut6_I4_O)        0.124     9.910 r  c_out_OBUF_inst_i_1/O
+                         net (fo=1, unplaced)         0.800    10.710    c_out_OBUF
+                         OBUF (Prop_obuf_I_O)         2.636    13.346 r  c_out_OBUF_inst/O
+                         net (fo=0)                   0.000    13.346    c_out
+                                                                      r  c_out (OUT)
+  -------------------------------------------------------------------    -------------------
+
+                         max delay                  100.000   100.000    
+                         output delay                -0.000   100.000    
+  -------------------------------------------------------------------
+                         required time                        100.000    
+                         arrival time                         -13.346    
+  -------------------------------------------------------------------
+                         slack                                 86.654    
+
+Slack (MET) :             86.659ns  (required time - arrival time)
+  Source:                 b[1]
+                            (input port)
+  Destination:            y[61]
+  Path Group:             **default**
+  Path Type:              Max at Slow Process Corner
+  Requirement:            100.000ns  (MaxDelay Path 100.000ns)
+  Data Path Delay:        13.341ns  (logic 5.355ns (40.142%)  route 7.985ns (59.858%))
+  Logic Levels:           16  (IBUF=1 LUT5=3 LUT6=11 OBUF=1)
+  Output Delay:           0.000ns
+  Timing Exception:       MaxDelay Path 100.000ns -datapath_only
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                                                      0.000     0.000 r  b[1] (IN)
+                         net (fo=0)                   0.000     0.000    b[1]
+                         IBUF (Prop_ibuf_I_O)         0.973     0.973 r  b_IBUF[1]_inst/O
+                         net (fo=6, unplaced)         0.800     1.773    b_IBUF[1]
+                         LUT5 (Prop_lut5_I3_O)        0.150     1.923 r  y_OBUF[2]_inst_i_2/O
+                         net (fo=4, unplaced)         0.926     2.849    y_OBUF[2]_inst_i_2_n_0
+                         LUT6 (Prop_lut6_I1_O)        0.124     2.973 r  y_OBUF[21]_inst_i_9/O
+                         net (fo=1, unplaced)         0.449     3.422    y_OBUF[21]_inst_i_9_n_0
+                         LUT6 (Prop_lut6_I3_O)        0.124     3.546 r  y_OBUF[21]_inst_i_7/O
+                         net (fo=2, unplaced)         0.460     4.006    y_OBUF[21]_inst_i_7_n_0
+                         LUT6 (Prop_lut6_I1_O)        0.124     4.130 r  y_OBUF[25]_inst_i_9/O
+                         net (fo=1, unplaced)         0.449     4.579    y_OBUF[25]_inst_i_9_n_0
+                         LUT6 (Prop_lut6_I4_O)        0.124     4.703 r  y_OBUF[25]_inst_i_5/O
+                         net (fo=2, unplaced)         0.460     5.163    y_OBUF[25]_inst_i_5_n_0
+                         LUT6 (Prop_lut6_I1_O)        0.124     5.287 r  y_OBUF[48]_inst_i_15/O
+                         net (fo=1, unplaced)         0.449     5.736    y_OBUF[48]_inst_i_15_n_0
+                         LUT6 (Prop_lut6_I3_O)        0.124     5.860 r  y_OBUF[48]_inst_i_13/O
+                         net (fo=2, unplaced)         0.460     6.320    y_OBUF[48]_inst_i_13_n_0
+                         LUT6 (Prop_lut6_I1_O)        0.124     6.444 r  y_OBUF[57]_inst_i_11/O
+                         net (fo=1, unplaced)         0.449     6.893    y_OBUF[57]_inst_i_11_n_0
+                         LUT6 (Prop_lut6_I3_O)        0.124     7.017 f  y_OBUF[57]_inst_i_9/O
+                         net (fo=1, unplaced)         0.449     7.466    y_OBUF[57]_inst_i_9_n_0
+                         LUT6 (Prop_lut6_I2_O)        0.124     7.590 r  y_OBUF[57]_inst_i_7/O
+                         net (fo=1, unplaced)         0.449     8.039    y_OBUF[57]_inst_i_7_n_0
+                         LUT6 (Prop_lut6_I2_O)        0.124     8.163 f  y_OBUF[57]_inst_i_6/O
+                         net (fo=1, unplaced)         0.449     8.612    y_OBUF[57]_inst_i_6_n_0
+                         LUT6 (Prop_lut6_I3_O)        0.124     8.736 r  y_OBUF[57]_inst_i_2/O
+                         net (fo=5, unplaced)         0.477     9.213    y_OBUF[57]_inst_i_2_n_0
+                         LUT5 (Prop_lut5_I3_O)        0.116     9.329 r  y_OBUF[61]_inst_i_2/O
+                         net (fo=2, unplaced)         0.460     9.789    y_OBUF[61]_inst_i_2_n_0
+                         LUT5 (Prop_lut5_I0_O)        0.116     9.905 r  y_OBUF[61]_inst_i_1/O
+                         net (fo=1, unplaced)         0.800    10.705    y_OBUF[61]
+                         OBUF (Prop_obuf_I_O)         2.636    13.341 r  y_OBUF[61]_inst/O
+                         net (fo=0)                   0.000    13.341    y[61]
+                                                                      r  y[61] (OUT)
+  -------------------------------------------------------------------    -------------------
+
+                         max delay                  100.000   100.000    
+                         output delay                -0.000   100.000    
+  -------------------------------------------------------------------
+                         required time                        100.000    
+                         arrival time                         -13.341    
+  -------------------------------------------------------------------
+                         slack                                 86.659    
+
+Slack (MET) :             87.181ns  (required time - arrival time)
+  Source:                 b[1]
+                            (input port)
+  Destination:            y[53]
+  Path Group:             **default**
+  Path Type:              Max at Slow Process Corner
+  Requirement:            100.000ns  (MaxDelay Path 100.000ns)
+  Data Path Delay:        12.819ns  (logic 5.247ns (40.934%)  route 7.571ns (59.066%))
+  Logic Levels:           15  (IBUF=1 LUT3=1 LUT5=1 LUT6=11 OBUF=1)
+  Output Delay:           0.000ns
+  Timing Exception:       MaxDelay Path 100.000ns -datapath_only
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                                                      0.000     0.000 r  b[1] (IN)
+                         net (fo=0)                   0.000     0.000    b[1]
+                         IBUF (Prop_ibuf_I_O)         0.973     0.973 r  b_IBUF[1]_inst/O
+                         net (fo=6, unplaced)         0.800     1.773    b_IBUF[1]
+                         LUT5 (Prop_lut5_I3_O)        0.150     1.923 f  y_OBUF[2]_inst_i_2/O
+                         net (fo=4, unplaced)         0.926     2.849    y_OBUF[2]_inst_i_2_n_0
+                         LUT6 (Prop_lut6_I1_O)        0.124     2.973 f  y_OBUF[21]_inst_i_9/O
+                         net (fo=1, unplaced)         0.449     3.422    y_OBUF[21]_inst_i_9_n_0
+                         LUT6 (Prop_lut6_I3_O)        0.124     3.546 f  y_OBUF[21]_inst_i_7/O
+                         net (fo=2, unplaced)         0.460     4.006    y_OBUF[21]_inst_i_7_n_0
+                         LUT6 (Prop_lut6_I1_O)        0.124     4.130 f  y_OBUF[25]_inst_i_9/O
+                         net (fo=1, unplaced)         0.449     4.579    y_OBUF[25]_inst_i_9_n_0
+                         LUT6 (Prop_lut6_I4_O)        0.124     4.703 f  y_OBUF[25]_inst_i_5/O
+                         net (fo=2, unplaced)         0.460     5.163    y_OBUF[25]_inst_i_5_n_0
+                         LUT6 (Prop_lut6_I1_O)        0.124     5.287 f  y_OBUF[48]_inst_i_15/O
+                         net (fo=1, unplaced)         0.449     5.736    y_OBUF[48]_inst_i_15_n_0
+                         LUT6 (Prop_lut6_I3_O)        0.124     5.860 f  y_OBUF[48]_inst_i_13/O
+                         net (fo=2, unplaced)         0.460     6.320    y_OBUF[48]_inst_i_13_n_0
+                         LUT6 (Prop_lut6_I4_O)        0.124     6.444 f  y_OBUF[48]_inst_i_10/O
+                         net (fo=2, unplaced)         0.460     6.904    y_OBUF[48]_inst_i_10_n_0
+                         LUT6 (Prop_lut6_I1_O)        0.124     7.028 r  y_OBUF[48]_inst_i_9/O
+                         net (fo=1, unplaced)         0.449     7.477    y_OBUF[48]_inst_i_9_n_0
+                         LUT6 (Prop_lut6_I3_O)        0.124     7.601 f  y_OBUF[48]_inst_i_3/O
+                         net (fo=4, unplaced)         0.473     8.074    y_OBUF[48]_inst_i_3_n_0
+                         LUT6 (Prop_lut6_I4_O)        0.124     8.198 f  y_OBUF[52]_inst_i_5/O
+                         net (fo=5, unplaced)         0.477     8.675    y_OBUF[52]_inst_i_5_n_0
+                         LUT6 (Prop_lut6_I0_O)        0.124     8.799 r  y_OBUF[53]_inst_i_2/O
+                         net (fo=2, unplaced)         0.460     9.259    y_OBUF[53]_inst_i_2_n_0
+                         LUT3 (Prop_lut3_I2_O)        0.124     9.383 r  y_OBUF[53]_inst_i_1/O
+                         net (fo=1, unplaced)         0.800    10.183    y_OBUF[53]
+                         OBUF (Prop_obuf_I_O)         2.636    12.819 r  y_OBUF[53]_inst/O
+                         net (fo=0)                   0.000    12.819    y[53]
+                                                                      r  y[53] (OUT)
+  -------------------------------------------------------------------    -------------------
+
+                         max delay                  100.000   100.000    
+                         output delay                -0.000   100.000    
+  -------------------------------------------------------------------
+                         required time                        100.000    
+                         arrival time                         -12.819    
+  -------------------------------------------------------------------
+                         slack                                 87.181    
+
+
+
+
