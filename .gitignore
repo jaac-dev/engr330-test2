@@ -1,0 +1,6 @@
+# Vivado
+/*.log
+/*.pb
+/*.jou
+/*.wdb
+/xsim.dir
