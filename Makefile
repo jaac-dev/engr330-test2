@@ -3,10 +3,14 @@ XVLOG := xvlog.bat
 XELAB := xelab.bat
 XSIM := xsim.bat
 
+MODULE := tb_rca
+
 # Sources Configuration
 SOURCES := \
 	src/rca.sv \
-	test/rca_tb.sv
+	test/rca_tb.sv \
+	src/cla.sv \
+	test/cla_tb.sv
 
 # Root Task
 all: simulate
@@ -24,7 +28,7 @@ compile: build
 .PHONY: elaborate
 elaborate: compile
 	cd build
-	$(XELAB) work.tb -s tb_sim --relax -debug all
+	$(XELAB) work.$(MODULE) -s tb_sim --relax -debug all
 
 # Simulate Task
 .PHONY: simulate

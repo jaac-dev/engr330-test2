@@ -1,4 +1,4 @@
-interface rca_bus #(parameter int N = 8) ();
+interface cla_bus #(parameter int N = 8) ();
   logic [N - 1:0] a, b, y;
   logic c_in, c_out;
 
@@ -6,7 +6,7 @@ interface rca_bus #(parameter int N = 8) ();
   modport test (output a, b, c_in, input y, c_out);
 endinterface
 
-module rca_tb #(parameter int N = 8) (rca_bus.test bus);
+module cla_tb #(parameter int N = 8) (cla_bus.test bus);
   // Task to run a test.
   task automatic run(logic [N - 1:0] a, logic [N - 1:0] b, logic c_in);
     // Calculate the expected value.
@@ -19,12 +19,12 @@ module rca_tb #(parameter int N = 8) (rca_bus.test bus);
     bus.c_in = c_in; 
 
     #1; // Wait for logic.
-    $display("RCA Test (%0d bits): a = %0d, b = %0d, c_in = %0d, expected = %0d, result = %0d", N, bus.a, bus.b, bus.c_in, expected, {bus.c_out, bus.y});
+    $display("CLA Test (%0d bits): a = %0d, b = %0d, c_in = %0d, expected = %0d, result = %0d", N, bus.a, bus.b, bus.c_in, expected, {bus.c_out, bus.y});
 
     // Check the result.
     assert ({bus.c_out, bus.y} === expected)
     else $error(
-      "RCA Test Failed (%0d bits): a = %0d, b = %0d, c_in = %0d, expected = %0d, result = %0d",
+      "CLA Test Failed (%0d bits): a = %0d, b = %0d, c_in = %0d, expected = %0d, result = %0d",
       N,
       a, b, c_in,
       expected, bus.y
@@ -38,11 +38,11 @@ module rca_tb #(parameter int N = 8) (rca_bus.test bus);
     run('1, '0, '1);
     run('0, '1, '1);
 
-    
+
   end
 endmodule
 
-module tb_rca ();
+module tb_cla();
   localparam int N_WIDTHS = 4;
   localparam int WIDTHS[N_WIDTHS] = '{8, 16, 32, 64};
 
@@ -50,9 +50,9 @@ module tb_rca ();
   for (i = 0; i < N_WIDTHS; i++) begin : generated
     localparam int WIDTH = WIDTHS[i];
 
-    rca_bus #(.N(WIDTH)) bus();
+    cla_bus #(.N(WIDTH)) bus();
     
-    rca #(.N(WIDTH)) rca_impl(
+    cla #(.N_BLOCKS(WIDTH / 4)) cla_impl(
       .a(bus.a),
       .b(bus.b),
       .c_in(bus.c_in),
@@ -60,7 +60,7 @@ module tb_rca ();
       .c_out(bus.c_out)
     );
 
-    rca_tb #(.N(WIDTH)) rca_tb_impl(bus);
+    cla_tb #(.N(WIDTH)) cla_tb_impl(bus);
   end
 
   initial begin
